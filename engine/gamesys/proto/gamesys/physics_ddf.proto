@@ -505,7 +505,7 @@ message Collision
  *
  * ```lua
  * physics.set_event_listener(function(self, event, data)
- *   if event == hash("collision_event") then
+ *   if event.type == hash("collision_event") then
  *       pprint(data)
  *       -- {
  *       --  a = {
@@ -570,7 +570,7 @@ message Trigger
  *
  * ```lua
  * physics.set_event_listener(function(self, event, data)
- *  if event ==  hash("trigger_event") then
+ *  if event.type ==  hash("trigger_event") then
  *      if data.enter then
  *         -- take action for entry
  *      else

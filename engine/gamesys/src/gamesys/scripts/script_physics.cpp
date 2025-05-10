@@ -1569,7 +1569,7 @@ namespace dmGameSystem
      *
      * ```lua
      * local function physics_world_listener(self, event, data)
-     *   if event == hash("contact_point_event") then
+     *   if event.type == hash("contact_point_event") then
      *     pprint(data)
      *     -- {
      *     --  distance = 2.1490633487701,
@@ -1593,7 +1593,7 @@ namespace dmGameSystem
      *     --    relative_velocity = vmath.vector3(0, 0, 0),
      *     --  },
      *     -- }
-     *   elseif event == hash("collision_event") then
+     *   elseif event.type == hash("collision_event") then
      *     pprint(data)
      *     -- {
      *     --  a = {
@@ -1607,7 +1607,7 @@ namespace dmGameSystem
      *     --          id = hash: [/go2]
      *     --      }
      *     -- }
-     *   elseif event ==  hash("trigger_event") then
+     *   elseif event.type ==  hash("trigger_event") then
      *     pprint(data)
      *     -- {
      *     --  enter = true,
@@ -1620,7 +1620,7 @@ namespace dmGameSystem
      *     --      id = hash: [/go1]
      *     --  }
      *     -- },
-     *   elseif event ==  hash("ray_cast_response") then
+     *   elseif event.type ==  hash("ray_cast_response") then
      *     pprint(data)
      *     --{
      *     --  group = hash: [default],
@@ -1630,7 +1630,7 @@ namespace dmGameSystem
      *     --  normal = vmath.vector3(0, 1, 0),
      *     --  id = hash: [/go]
      *     -- }
-     *   elseif event ==  hash("ray_cast_missed") then
+     *   elseif event.type ==  hash("ray_cast_missed") then
      *     pprint(data)
      *     -- {
      *     --  request_id = 0
@@ -1737,7 +1737,7 @@ namespace dmGameSystem
      *           --    relative_velocity = vmath.vector3(0, 0, 0),
      *           --  },
      *           -- }
-     *       elseif event == hash("collision_event") then
+     *       elseif event.type == hash("collision_event") then
      *           pprint(event)
      *           -- {
      *           --  a = {
@@ -1751,7 +1751,7 @@ namespace dmGameSystem
      *           --          id = hash: [/go2]
      *           --      }
      *           -- }
-     *       elseif event ==  hash("trigger_event") then
+     *       elseif event.type ==  hash("trigger_event") then
      *           pprint(event)
      *           -- {
      *           --  enter = true,
@@ -1764,7 +1764,7 @@ namespace dmGameSystem
      *           --      id = hash: [/go1]
      *           --  }
      *           -- },
-     *       elseif event ==  hash("ray_cast_response") then
+     *       elseif event.type ==  hash("ray_cast_response") then
      *           pprint(event)
      *           --{
      *           --  group = hash: [default],
@@ -1774,7 +1774,7 @@ namespace dmGameSystem
      *           --  normal = vmath.vector3(0, 1, 0),
      *           --  id = hash: [/go]
      *           -- }
-     *       elseif event ==  hash("ray_cast_missed") then
+     *       elseif event.type ==  hash("ray_cast_missed") then
      *           pprint(event)
      *           -- {
      *           --  request_id = 0
